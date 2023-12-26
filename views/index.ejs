@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>CodeCraft</title>
+</head>
+<body class="bg-slate-950">
+
+    
+
+<nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="logo.png" class="h-8 rounded-full" alt="Flowbite Logo">
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">CodeCraft</span>
+    </a>
+    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get started</button>
+        <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+    </div>
+    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <li>
+          <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+  
+
+
+
+
+
+    <h1 class="text-center text-blue-100 text-5xl font-extrabold py-5">CodeCraft</h1>
+    <form action="/generate" method="post">
+    <label for="txt"></label>
+    <div class="flex justify-center py-10"><input class="bg-slate-200 h-20 w-[900px] rounded-full text-center text-2xl" id="txt" name="txt" placeholder="Type something"></div>
+    <br>
+    <div class="flex justify-center p-3"><button class="text-xl text-center font-bold bg-blue-300 rounded-xl px-10 py-3" type="generate">Generate QR code</button></div>
+</form>
+    <div class="flex justify-center p-10"><a class="text-xl text-white text-center font-bold bg-blue-800 rounded-xl px-10 py-3" href="http://localhost:3000/Generate">Click to Scan the image</a></div>
+
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto flex flex-wrap">
+          <div class="flex relative pt-10 pb-20 sm:items-center md:w-2/3 mx-auto">
+            <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+              <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+            </div>
+            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">1</div>
+            <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+              <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-case-sensitive"><path d="m3 15 4-8 4 8"/><path d="M4 13h6"/><circle cx="18" cy="12" r="3"/><path d="M21 9v6"/></svg>
+              </div>
+              <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                <h2 class="font-medium title-font text-blue-200 mb-1 text-xl">Type any text or website name in the input</h2>
+               
+              </div>
+            </div>
+          </div>
+          <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
+            <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+              <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+            </div>
+            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">2</div>
+            <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+              <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-atom"><circle cx="12" cy="12" r="1"/><path d="M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.54-11.9-4.5-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.54 11.9 4.5Z"/><path d="M15.7 15.7c4.52-4.54 6.54-9.87 4.5-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.54 9.87-4.5 11.9 2.03 2.04 7.36.02 11.9-4.5Z"/></svg>
+              </div>
+              <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                <h2 class="font-medium title-font text-blue-200 mb-1 text-xl">Then Click the Generate QR code button</h2>
+               
+              </div>
+            </div>
+          </div>
+          <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
+            <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+              <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+            </div>
+            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">3</div>
+            <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+              <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>
+              </div>
+              <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                <h2 class="font-medium title-font text-blue-200 mb-1 text-xl">Then click The CLICK TO SCAN THE IMAGE button</h2>
+               
+              </div>
+            </div>
+          </div>
+          <div class="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
+            <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+              <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+            </div>
+            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">4</div>
+            <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+              <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-qr-code"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg>
+              </div>
+              <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                <h2 class="font-medium title-font text-blue-200 mb-1 text-xl">Bingo there you have it .. Your QR code for various purposes</h2>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <section class="text-gray-600 body-font pt-52">
+        <div class="container px-5 py-24 mx-auto flex flex-col">
+          <div class="lg:w-4/6 mx-auto">
+            <div class="rounded-lg h-64 overflow-hidden">
+              <img alt="content" class="object-cover object-center h-full w-full" src="https://img.freepik.com/free-photo/smartphone-laptop-communicate-wirelessly-cloud-generated-by-ai_188544-29911.jpg?t=st=1703586504~exp=1703590104~hmac=50cdf883402519d4d6eff078ba2cf155bb60dc6d572a100ffc384a77665ee217&w=1380">
+            </div>
+
+            <div class="flex flex-col sm:flex-row mt-10">
+              <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
+                <div class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-qr-code"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg>
+                </div>
+                <div class="flex flex-col items-center text-center justify-center">
+                  <h2 class="font-medium title-font mt-4 text-white text-lg">CodeCraft</h2>
+                  <div class="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
+                  <p class="text-lg text-white">"Scan and Share,<br> CodeCraft is here!"</p>
+                </div>
+              </div>
+              <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
+                <p class="leading-relaxed text-blue-100 text-lg mb-4">A brilliant coder named metaBlocks, after a fortuitous encounter with a mysterious quantum computer, gains the ability to generate QR codes at an unprecedented speed. With the power to encode information in the blink of an eye, CodeCraft dedicates their skills to help others share information seamlessly.</p>
+                <a class="text-indigo-500 inline-flex items-center">Learn More
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font">
+        <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+          <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="hero.png">
+          <div class="text-center lg:w-2/3 w-full">
+            <h1 class="title-font sm:text-4xl text-5xl mb-4 font-bold text-blue-200">QR ALCHEMY</h1>
+            <p class="mb-8 text-white text-lg leading-relaxed"> CodeCraft Prodigy wears a suit adorned with intricate code patterns and a striking CodeCraft emblem that dynamically transforms into a QR code. The suit integrates state-of-the-art technology for creating and manipulating QR codes.
+                <br>
+                CodeCraft Prodigy's mission is to revolutionize information sharing. With the power of QR Alchemy, they assist businesses and individuals in crafting visually appealing, efficient QR codes for seamless communication and connectivity.
+            </p>
+            <div class="flex justify-center">
+              <button class="inline-flex text-white bg-blue-700 border-0 py-2 px-6 focus:outline-none hover:bg-blue-800 rounded text-lg">Scroll to Know more</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <h1 class="sm:text-3xl text-3xl font-medium title-font text-center text-blue-200 mb-20">Features of
+            <br class="hidden sm:block">CodeCraft
+          </h1>
+          <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+            <div class="p-4 md:w-1/3 flex">
+              <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-template"><rect width="18" height="7" x="3" y="3" rx="1"/><rect width="9" height="7" x="3" y="14" rx="1"/><rect width="5" height="7" x="16" y="14" rx="1"/></svg>
+              </div>
+              <div class="flex-grow pl-6">
+                <h2 class="text-white text-lg title-font font-medium mb-2">Any Site</h2>
+                <p class="leading-relaxed text-lg text-white text-base">Convert any site on the go</p>
+
+              </div>
+            </div>
+            <div class="p-4 md:w-1/3 flex">
+              <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-case-sensitive"><path d="m3 15 4-8 4 8"/><path d="M4 13h6"/><circle cx="18" cy="12" r="3"/><path d="M21 9v6"/></svg>
+              </div>
+              <div class="flex-grow pl-6">
+                <h2 class="text-white text-lg title-font font-medium mb-2">Any text</h2>
+                <p class="leading-relaxed text-lg text-white text-base">Convert any text on the go</p>
+                
+              </div>
+            </div>
+            <div class="p-4 md:w-1/3 flex">
+              <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+              <div class="flex-grow pl-6">
+                <h2 class="text-white text-lg title-font font-medium mb-2">Literally Anything</h2>
+                <p class="leading-relaxed text-lg text-white text-base">Convert literally anything be it your email id, phone number, or any simple piece of text</p>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto flex items-center md:flex-row flex-col">
+          <div class="flex flex-col md:pr-10 md:mb-0 mb-6 pr-0 w-full md:w-auto md:text-left text-center">
+            <h2 class="text-lg text-blue-300 tracking-widest font-medium title-font mb-1">CodeCraft</h2>
+            <h1 class="md:text-3xl text-2xl text-white font-medium title-font text-gray-900">Avaialable Everywhere</h1>
+          </div>
+          <div class="flex md:ml-auto md:mr-0 mx-auto items-center flex-shrink-0 space-x-4 ml-1">
+            <button class="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-200 focus:outline-none">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 512 512">
+                <path d="M99.617 8.057a50.191 50.191 0 00-38.815-6.713l230.932 230.933 74.846-74.846L99.617 8.057zM32.139 20.116c-6.441 8.563-10.148 19.077-10.148 30.199v411.358c0 11.123 3.708 21.636 10.148 30.199l235.877-235.877L32.139 20.116zM464.261 212.087l-67.266-37.637-81.544 81.544 81.548 81.548 67.273-37.64c16.117-9.03 25.738-25.442 25.738-43.908s-9.621-34.877-25.749-43.907zM291.733 279.711L60.815 510.629c3.786.891 7.639 1.371 11.492 1.371a50.275 50.275 0 0027.31-8.07l266.965-149.372-74.849-74.847z"></path>
+              </svg>
+              <span class="ml-1 flex items-start flex-col leading-none">
+                <span class="text-xs text-gray-600 mb-1">GET IT ON</span>
+                <span class="title-font font-medium">Google Play</span>
+              </span>
+            </button>
+            <button class="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-200 focus:outline-none">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6" viewBox="0 0 305 305">
+                <path d="M40.74 112.12c-25.79 44.74-9.4 112.65 19.12 153.82C74.09 286.52 88.5 305 108.24 305c.37 0 .74 0 1.13-.02 9.27-.37 15.97-3.23 22.45-5.99 7.27-3.1 14.8-6.3 26.6-6.3 11.22 0 18.39 3.1 25.31 6.1 6.83 2.95 13.87 6 24.26 5.81 22.23-.41 35.88-20.35 47.92-37.94a168.18 168.18 0 0021-43l.09-.28a2.5 2.5 0 00-1.33-3.06l-.18-.08c-3.92-1.6-38.26-16.84-38.62-58.36-.34-33.74 25.76-51.6 31-54.84l.24-.15a2.5 2.5 0 00.7-3.51c-18-26.37-45.62-30.34-56.73-30.82a50.04 50.04 0 00-4.95-.24c-13.06 0-25.56 4.93-35.61 8.9-6.94 2.73-12.93 5.09-17.06 5.09-4.64 0-10.67-2.4-17.65-5.16-9.33-3.7-19.9-7.9-31.1-7.9l-.79.01c-26.03.38-50.62 15.27-64.18 38.86z"></path>
+                <path d="M212.1 0c-15.76.64-34.67 10.35-45.97 23.58-9.6 11.13-19 29.68-16.52 48.38a2.5 2.5 0 002.29 2.17c1.06.08 2.15.12 3.23.12 15.41 0 32.04-8.52 43.4-22.25 11.94-14.5 17.99-33.1 16.16-49.77A2.52 2.52 0 00212.1 0z"></path>
+              </svg>
+              <span class="ml-1 flex items-start flex-col leading-none">
+                <span class="text-xs text-gray-600 mb-1">Download on the</span>
+                <span class="title-font font-medium">App Store</span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-20">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Downloads</h1>
+            <p class="lg:w-2/3 mx-auto text-blue-200 leading-relaxed text-base">Our website is available everywhere be it mac, windows, linux, android .....everywhere. Just download it and convert anything , be it a site or a piece of text or a phone number CodeCraft converts everything for you on the go.</p>
+          </div>
+          <div class="flex flex-wrap -m-4 text-center">
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-indigo-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+                  <path d="M8 17l4 4 4-4m-4-5v9"></path>
+                  <path d="M20.88 18.09A5 5 0 0018 9h-1.26A8 8 0 103 16.29"></path>
+                </svg>
+                <h2 class="title-font font-medium text-blue-200 text-3xl">2.7K</h2>
+                <p class="leading-relaxed">Downloads</p>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-indigo-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
+                </svg>
+                <h2 class="title-font text-blue-200 font-medium text-3xl ">1.3K</h2>
+                <p class="leading-relaxed">Users</p>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-indigo-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+                  <path d="M3 18v-6a9 9 0 0118 0v6"></path>
+                  <path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"></path>
+                </svg>
+                <h2 class="title-font font-medium text-blue-200 text-3xl">74</h2>
+                <p class="leading-relaxed">Files</p>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-indigo-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <h2 class="title-font font-medium text-blue-200 text-3xl">46</h2>
+                <p class="leading-relaxed">Places</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+     
+      <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <h1 class="text-3xl font-medium title-font text-white mb-12 text-center">Testimonials</h1>
+          <div class="flex flex-wrap -m-4">
+            <div class="p-4 md:w-1/2 w-full">
+              <div class="h-full bg-slate-950 p-8 rounded">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-5 h-5 text-gray-400 mb-4" viewBox="0 0 975.036 975.036">
+                  <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+                </svg>
+                <p class="leading-relaxed text-blue-200 mb-6">CodeCraft's QR code generator has been an invaluable tool for my business. It's user-friendly, efficient, and the dynamic QR code features are a game-changer. Generating QR codes for our marketing materials has never been this easy!</p>
+                <a class="inline-flex items-center">
+                  <img alt="testimonial" src="https://img.freepik.com/free-photo/man-with-beard-shirt-that-says-word-it_1340-40384.jpg?t=st=1703589810~exp=1703593410~hmac=6e02803f63d555ccf82a6b5d755e2aebb6f04aedf6e228a023eae869804b7383&w=740" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
+                  <span class="flex-grow flex flex-col pl-4">
+                    <span class="title-font font-medium text-white">Holden Caulfield</span>
+                    <span class="text-white text-sm">Agency Owner</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/2 w-full">
+              <div class="h-full bg-slate-950 p-8 rounded">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-5 h-5 text-gray-400 mb-4" viewBox="0 0 975.036 975.036">
+                  <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+                </svg>
+                <p class="leading-relaxed text-blue-200 mb-6">One of the best qr code generators i have witnessed. it is not only hassle free but also very easy to use. I recommend this to everyone as it is the best and the simplest mulyi-purpose qr code generators.</p>
+                <a class="inline-flex items-center">
+                  <img alt="testimonial" src="https://img.freepik.com/free-photo/close-up-man-smiling-nature_23-2150771113.jpg?t=st=1703586860~exp=1703590460~hmac=4274fcede0608a9d24eee62d7dc9b61d51fbbba8fde596b4a09e0754c1c64cc9&w=360" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
+                  <span class="flex-grow flex flex-col pl-4">
+                    <span class="title-font  font-medium text-white">Alper Kamu</span>
+                    <span class="text-white text-sm">DESIGNER</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+          <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+            <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+              <img class="rounded-full" height="40" width="40" src="logo.png" alt="">
+              <span class="ml-3 text-xl text-blue-200">CodeCraft</span>
+            </a>
+            <p class="mt-2 text-sm text-blue-200">Just scan on the go...</p>
+          </div>
+          <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+           
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <nav class="list-none space-y-5 mb-10">
+                <li>
+                  <a class="text-blue-200 font-bold text-xl hover:text-blue-300">Home</a>
+                </li>
+                <li>
+                  <a class="text-blue-200 font-bold text-xl hover:text-blue-300">About</a>
+                </li>
+                <li>
+                  <a class="text-blue-200 font-bold text-xl hover:text-blue-300">Contact</a>
+                </li>
+                <li>
+                  <a class="text-blue-200 font-bold text-xl hover:text-blue-300">Services</a>
+                </li>
+              </nav>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <nav class="list-none mb-10 space-y-5">
+                <li>
+                  <a class="text-blue-200 font-bold text-lg hover:text-blue-300">QR code generator</a>
+                </li>
+                <li>
+                  <a class="text-blue-200 font-bold text-lg hover:text-blue-300">Jokes Gnerator</a>
+                </li>
+                <li>
+                  <a class="text-blue-200 font-bold text-lg hover:text-blue-300">Calculator</a>
+                </li>
+              </nav>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+
+              <nav class="list-none mb-10 space-y-5">
+                <li>
+                  <a class="text-blue-200 text-lg font-bold hover:text-blue-300">Google play</a>
+                </li>
+                <li>
+                  <a class="text-blue-200 text-lg font-bold hover:text-blue-300">App store</a>
+                </li>
+                <li>
+                  <a class="text-blue-200 text-lg font-bold hover:text-blue-300">Windows</a>
+                </li>
+                <li>
+                  <a class="text-blue-200 text-lg font-bold hover:text-blue-300">Mac</a>
+                </li>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="bg-slate-950">
+          <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+            <p class="text-white text-sm text-center sm:text-left">© 2023
+              <a href="" rel="noopener noreferrer" class="text-white ml-1" target="_blank">@metaBlocks2003</a>
+            </p>
+            <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+              <a class="text-white">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-3 text-white">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                </svg>
+              </a>
+              <a class="ml-3 text-white">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                </svg>
+              </a>
+              <a class="ml-3 text-white">
+                <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                  <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>
